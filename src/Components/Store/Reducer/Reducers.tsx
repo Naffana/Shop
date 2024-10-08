@@ -97,24 +97,18 @@ const initialStateAuth: IAuthState= {
 });
 
 const updateUserInLocalStorage = (updatedUser: { login: {email: string; userName: string; }; }) => {
-  // Получаем массив всех пользователей из localStorage
-
-  // Если нет пользователей в localStorage, выводим сообщение и выходим из функции
-  // if (!Array.isArray(Users) || Users.length === 0) {
-  //   console.log('No users found in localStorage');
-  //   return;
-  // }
+  
 const users = JSON.parse(localStorage.getItem('users') || '[]');
-  // Ищем текущего пользователя в массиве пользователей (например, по userName)
+ 
   const updatedUsers = users.map((user: { login: { userName: string; email:string}; }) => {
-    // let userNames = new RegExp(updatedUser.login.userName, "i")
+
     if (user.login.userName.toLowerCase() === updatedUser.login.userName.toLowerCase() || user.login.email === updatedUser.login.email) {
       return updatedUser;
     }
     return user; 
   });
 
-  // Сохраняем обновлённый массив пользователей в localStorage
+
   localStorage.setItem('users', JSON.stringify(updatedUsers));
 }
 

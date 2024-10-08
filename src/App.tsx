@@ -1,10 +1,5 @@
 import React  from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import { useDispatch} from 'react-redux';
-
-// import { AppDispatch} from './Components/Store/Store';
-// import { getProducts} from './Components/Store/Action/Action';
-
 import {Header} from './Components/header/Header';
 import Main from './Components/Main/Main';
 import SignIn from './Components/Main/Sign In(Up)/SignIn';
@@ -16,25 +11,11 @@ import SingleProduct from './Components/Product/SingleProduct';
 import ProtectedRoute from './Components/Main/Sign In(Up)/ProtectedRoute';
 import User from './Components/User/User';
 import EditUser from './Components/User/EditUser';
-import Footer from './Components/footer/Footer';
 
-// import Products from './Components/Store/Product/Products';
-// import store from './Components/Store/Store';
-// import User from './Components/Store/User/User';
 
 
 
 function App() {
-
-  // const useAppDispatch = useDispatch.withTypes<AppDispatch>()
-  // const dispatch = useAppDispatch();
-
-  // useEffect(()=>{
-  //  dispatch(getProducts());
-  //  dispatch(getUsers());
-  // },[dispatch]);
-
-
   return(
     
 <>
@@ -54,7 +35,7 @@ function App() {
       <Route path='/EditUser' element={<EditUser/>}/>
       <Route path='/products/:id' element={<SingleProduct/>}/>
     </Routes>
-    {/* <Footer/> */}
+   
 </>
   
   );

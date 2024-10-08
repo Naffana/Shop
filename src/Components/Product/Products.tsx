@@ -17,7 +17,6 @@ import { addItemToCart } from '../Store/Reducer/Reducers';
 export const  Products = () => {
   const useAppDispatch = useDispatch.withTypes<AppDispatch>()
   const dispatch = useAppDispatch();
-  // const {currentUser} = useSelector((state:RootState)  => state.users);
   const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
   const { data } = useParams();
   const navigate = useNavigate();
@@ -40,14 +39,14 @@ export const  Products = () => {
   }
 
 
-  const [currentPage, setCurrentPage] = useState(1); // текущая страница
+  const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 3;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = category_items.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Функция для переключения страниц
+ 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   return(
     <div className='site'>

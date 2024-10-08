@@ -38,7 +38,7 @@ function Cart() {
     const updatedCart = user.cart?.filter((item) => item.id !== id) || [];
     const updatedUser = { ...user, cart: updatedCart };  
     setUser(updatedUser);
-    localStorage.setItem('currentUser', JSON.stringify(updatedUser));  // Обновляем localStorage
+    localStorage.setItem('currentUser', JSON.stringify(updatedUser)); 
   }
 };
 const quantity = (id: number, newQuantity: number) => {

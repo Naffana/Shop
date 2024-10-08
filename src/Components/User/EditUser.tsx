@@ -156,7 +156,6 @@ function EditUser() {
          autoComplete='off'
          />
       </div>
-      {/* {error && <div className='error'>{error}</div>} */}
       <button  type='submit'>Edit</button>
       </form>
       </div>

@@ -27,27 +27,13 @@ const SignUp:React.FC = () => {
     }));
   };
 
-  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { value, name } = event.target;
-  //   setValue((values)=>({ ...values, [name]: value }));
-  //   console.log(values);
-    
-  // };
+  
 
-  // const handlChange = ({target: {value, name}})=>{
-  //   setValue({...values, [name]: value })
-  // }
-//@ts-ignore
-  const handleSubmit=async (e)=>{
+  const handleSubmit=async (e: { preventDefault: () => void; })=>{
     e.preventDefault();
-    // const isEmpty = Object.values(values.login).some(val=>!val);
-    // console.log(isEmpty);
-    // if(!isEmpty) return;
-    // try {
+  
       await dispatch(createUser({ payload: values, navigate }));
-    // } catch (error) {
-    //   console.error("Error creating user:", error); 
-    // }
+   
   }
 
   const { error} = useSelector((state: RootState) => state.users);
