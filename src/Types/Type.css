@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+:root{
+   --red: #F24B4B;
+   --black: #051924;
+   --white: #ffe9cd;
+}
+
+#electronic{
+   --url: url(../Source/electronic.png);
+   --size: 45px;
+   --upsize: 55px;
+}
+#jewelry{
+   --url: url(../Source/jewelry.png);
+   --size: 55px;
+   --upsize: 65px;
+}
+#mans{
+   --url: url(../Source/mans.png);
+   --size: 70px;
+   --upsize: 80px;
+}
+#womans{
+  --url: url(../Source/womans.png);
+  --size: 70px;
+  --upsize: 80px;
+}
+
+*{
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent;
+   font-family: "Open Sans", sans-serif;
+   font-optical-sizing: auto;
+   /* font-weight: 500; */
+   /* font-style: normal; */
+   font-variation-settings:
+     "wdth" 100;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+}
+

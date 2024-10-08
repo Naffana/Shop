@@ -1,0 +1,260 @@
+@import '/src/Types/Type.css';
+
+.prod_card{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 400px;
+   height: 670px;
+   border: 10px solid var(--black);
+   border-radius: 25px;
+   background-color: var(--white);
+   margin-bottom: 30px;
+   margin: 0 30px 30px 30px;
+   padding: 8px 13px 8px 13px;
+
+}
+
+.Prod_site{
+   display: flex;
+   flex-direction: row;
+   
+}
+.rate img{
+   width: 25px;
+   height: 25px;
+}
+
+.price{
+   color: var(--red);
+   font-size: 35px;
+   margin: 10px;
+   font-weight:700;
+   text-decoration: underline;
+}
+.rate{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ 
+}
+
+.Prod_info{
+   width: 65%;
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   flex-direction: row;
+   font-size: 25px;
+   text-align: center;
+   color: var(--black);
+   opacity: 85%;
+   font-style: italic;
+}
+
+.Prod_Name{
+   text-align: center;
+   align-content: center;
+   color: var(--black);
+}
+
+.Prod_Name>h1{
+opacity: 1;
+}
+
+.info{
+   background:var(--red);
+   border-bottom-right-radius: 8px;
+   opacity: 95%;
+}
+
+.Prod_img{
+   display: flex;
+   justify-content: center;
+
+}
+.Prod_img img{
+   border: 5px solid var(--red);
+   border-radius: 17px;
+   width: 400px;
+   height: 400px;
+   padding: 0;
+   cursor: pointer;
+}
+
+
+.btn {
+   border: none;
+   border-radius: 25px;
+   cursor: pointer;
+ 
+   display: inline-block;
+  opacity: 90%;
+   position: relative;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+   background: var(--red);
+ }
+ 
+ .btn>h1{
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 800;
+   font-size: 20px;
+   color: var(--black);
+   z-index: 1;
+ }
+ .btn:after {
+   content: '';
+   position: absolute;
+   z-index: -5;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+ }
+
+ .btn:before {
+   -webkit-font-smoothing: antialiased;
+   position: absolute;
+   height: 100%;
+   left: 0;
+   top: 0;
+   line-height: 3;
+   width: 60px;
+   transition: .4s;
+ }
+
+ .sep {
+   padding: 15px 60px 20px 120px;
+ }
+ 
+ .sep:before {
+   background: rgba(0,0,0,0.15);
+ }
+ 
+ .btn:focus:before{
+    width: 100%;
+ }
+ .btn:active{
+   top: 2px;
+ }
+ .btn:hover {
+   background: var(--red);
+   opacity: 1;
+   
+ }
+ 
+ .cart:before{
+   background: url([url]../../../../Source/Cart.png);
+   padding-right: 5px;
+   background-color: #a13232;
+   background-repeat: no-repeat;
+   background-size: 65px 65px;
+   content: "";
+   border-radius: 25px;
+ }
+
+ .product_card{
+   width: 60%;
+ padding: 10% 0 0;
+ margin: auto;
+ 
+ }
+ .card{
+   position: relative;
+ z-index: 1;
+ background: var(--white);
+ max-width: 100%;
+ /* margin: 0 auto 100px; */
+ padding: 50px;
+ text-align: center;
+ border-radius: 10px;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+ vertical-align: middle;
+ margin-bottom: 100px;
+ }
+
+ .Product_img>img{
+   width: 300px;
+   height: 300px;
+   border: 5px solid var(--red);
+   border-radius: 20px;
+ }
+ .card{
+   display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 0.1fr 1fr 0.5fr 0.2fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "name name name"
+    "img info info"
+    "discription discription discription"
+    "button button button"
+ }
+ .Product_Name{
+   grid-area: name;
+   font-size: 15px;
+   margin-bottom: 15px;
+ }
+ .Product_img{
+   grid-area: img;
+ }
+ .Product_info{
+   grid-area: info;
+   display: flex;
+   flex-direction:column;
+   justify-content: space-around;
+   align-items: start;
+   margin-left: 20px;
+ }
+ .rateCount{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin-left: 10px;
+   font-size: 40px;
+ }
+ .product_rate>img{
+width: 40px;
+height: 40px;
+padding-right: 5px;
+ }
+ .product_rate{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+ .description{
+   grid-area: discription;
+   text-wrap: balance;
+   margin-top: 20px;
+   color: var(--black);
+   font-size: 20px;
+ }
+ .product_button{
+   grid-area: button;
+ }
+ .product_button > button{
+   width: 70%;
+   height: 100%;
+ }
+ .pgntn{
+   width: 100px;
+   height: 50px;
+   color: var(--black);
+ }
+ .pagination{
+   margin:0 25px 25px 25px;
+ }
+ .pgntn:disabled{
+   opacity: 50%;
+ }
+ .pgntn:disabled:active{
+   top: 0;
+ }
+
+
+
+ 

@@ -1,0 +1,39 @@
+
+.InfoPage{
+   width: 500px;
+   padding: 10% 0 0;
+   margin: auto;
+ 
+}
+
+.Info{
+   position: relative;
+ z-index: 1;
+ background: var(--white);
+ max-width: 500px;
+ padding: 50px;
+ text-align: center;
+ border-radius: 10px;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+ vertical-align: middle;
+}
+.imgEdit{
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+}
+.exit{
+   background:url('../../Source/exit.png') no-repeat;
+   width: 50px;
+   height: 50px;
+   background-size: cover;
+   cursor: pointer;
+}
+.btns{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+}
+.exit{
+   margin-top: 5px;
+}
