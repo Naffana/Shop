@@ -5,9 +5,14 @@
    margin: auto;
  
 }
+.EditPage{
+width: 50%;
+padding: 10% 0 0;
+margin: auto;
+}
 
 .Info{
-   position: relative;
+position: relative;
  z-index: 1;
  background: var(--white);
  max-width: 500px;
@@ -36,4 +41,95 @@
 }
 .exit{
    margin-top: 5px;
+}
+
+
+.formEdit {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   z-index: 1;
+   background: var(--white);
+   max-width: px;
+   /* margin: 0 auto 100px; */
+   padding: 60px;
+   text-align: center;
+   border-radius: 10px;
+   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   vertical-align: middle;
+ }
+ 
+ .Edit-form{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 200px;
+   min-width: 404px;
+ }
+ 
+ .formEdit input {
+   background: var(--black);
+   width: 100%;
+   border: 0;
+   margin: 0 0 15px;
+   padding: 15px;
+   box-sizing: border-box;
+   font-size: 23px;
+   border-radius: 10px;
+   color: var(--white);
+ }
+ 
+ .FormButton button {
+   text-transform: uppercase;
+   outline: 0;
+   background: var(--red);
+   width: 100%;
+   border: 0;
+   padding: 15px;
+   color: var(--white);
+   font-size: 14px;
+   -webkit-transition: all 0.3 ease;
+   transition: all 0.3 ease;
+   cursor: pointer;
+   border-radius: 10px;
+ }
+ 
+ .FormButton button:hover,.FormButton button:active,.FormButton button:focus {
+   opacity: 80%;
+ }
+ 
+ 
+@media (max-width:1024px) {
+   .EditPage{
+      padding-top: 200px;
+   } 
+   .Info{
+      margin-top: 100px;
+   }
+}
+@media (max-width:768px) {
+   .EditPage{
+      width: 100%;
+   }
+   
+}
+@media (max-width:540px) {
+   .InfoPage{
+      width: 300px; 
+      font-size: 10px;
+   }
+   .Info{
+      margin-top: 100px;
+   }
+   .formEdit{
+      font-size: 10px;
+   }
+   .formEdit input {
+      font-size: 15px;
+   }
+   .Edit-form{
+      min-width: 200px;
+   }
+   .EditPage{
+      padding-top: 150px;
+   } 
 }

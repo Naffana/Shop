@@ -53,7 +53,6 @@ export function Header() {
       <>
     <header>
       <div className='FormSearch' >
-
       <div className='Search'  > 
         <input autoComplete='off' type="search"  placeholder='Search...' name="s" id="search_tov"tabIndex= {0} 
         value={searchValue}
@@ -80,7 +79,6 @@ export function Header() {
         }
        </div>)
       }
-      
       </div>
 
       <div className='Logo' >

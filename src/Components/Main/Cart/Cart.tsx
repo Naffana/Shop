@@ -62,11 +62,11 @@ const quantity = (id: number, newQuantity: number) => {
       <div className='cartForm'>
         {user.cart.map((item) => (
           <div className='item' key={item.id}>
-            <Link to={`/products/${item.id}`}>
-            <div className='infoProd'>
+            <Link className='infoProd' to={`/products/${item.id}`}>
+            {/* <div className='infoProd'> */}
              <img className='infoImg' src={item.image} alt="" />
-              <h1> {item.title}</h1>
-            </div>
+              <h1> {item.title.slice(0,36)}...</h1>
+            {/* </div> */}
                 </Link>
             <div className='infoPrice'>
               <h2>Price: {item.price}$</h2>
@@ -94,8 +94,8 @@ const quantity = (id: number, newQuantity: number) => {
                       }
                     }}>+</div>
               </div>
-            </div>
             <div className='delete' onClick={()=>{clearCart(item.id)}}/>
+            </div>
           </div>
         ))}
       <h3>Total Sum: {totalSum()}$</h3>

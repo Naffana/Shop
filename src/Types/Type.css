@@ -10,21 +10,29 @@
    --url: url(../Source/electronic.png);
    --size: 45px;
    --upsize: 55px;
+   --mediasize: 70px;
+   --smollmediasize: 40px;
 }
 #jewelry{
    --url: url(../Source/jewelry.png);
    --size: 55px;
    --upsize: 65px;
+   --mediasize: 80px;
+   --smollmediasize: 45px;
 }
 #mans{
    --url: url(../Source/mans.png);
-   --size: 70px;
-   --upsize: 80px;
+   --size: 90px;
+   --upsize: 100px;
+   --mediasize: 115px;
+   --smollmediasize: 70px;
 }
 #womans{
   --url: url(../Source/womans.png);
-  --size: 70px;
-  --upsize: 80px;
+  --size: 90px;
+  --upsize: 100px;
+  --mediasize: 115px;
+  --smollmediasize: 70px;
 }
 
 *{

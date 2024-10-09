@@ -35,12 +35,11 @@ function ProductCart({id, image, title, price, rating, description, category}:IP
   
   <div className='Product_info'>
       <div className='Product_category'><h2>Category: {category}</h2></div>
+      <div className='rateCount'>
       <div className='price'>
       <p>Price: {price}$</p>
       </div>
-      <div className='rateCount'>
       <div className='product_rate'><img src= {rate} alt="" /><p>{rating.rate}</p></div>
-      <p>/</p>
       <p>Count sold: {rating.count}</p>
       </div>
   </div>

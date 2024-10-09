@@ -62,3 +62,18 @@
   color: var(--red);
   text-decoration: none;
 }
+
+@media (max-width:1024px) {
+  .LoginPage {
+   padding-top:200px ;
+  }
+}
+@media (max-width:540px) {
+  .LoginPage {
+    width: 100%;
+    padding-top:120px;
+  }
+  .form{
+    max-width: 100%;
+  }
+}

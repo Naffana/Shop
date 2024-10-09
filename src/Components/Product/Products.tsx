@@ -60,15 +60,14 @@ export const  Products = () => {
     <div className="Prod_Name">
         <h1>{items.title.slice(0,36)}</h1>
     </div>
-    <div className='price'>
+    <div className='Prod_price'>
         <p>{items.price}$</p>
     </div>
     <div className='Prod_info'>
         <div className='rate'><img src= {rate} alt="" /><p>{items.rating.rate}</p></div>
-        <p>/</p>
         <p>Count sold: {items.rating.count}</p>
     </div>
-    
+
     </Link> 
     <button className='btn sep cart'
      onClick={
@@ -83,7 +82,7 @@ export const  Products = () => {
   </div>
   
   ))}
- </div>
+  </div>
       <div className="pagination">
         <button className='btn pgntn'
           onClick={() => paginate(currentPage - 1)}
@@ -99,8 +98,8 @@ export const  Products = () => {
           <h2>Next</h2>
         </button>
       </div>
-      </div>
-   
+      
+    </div>
   )
 }
 

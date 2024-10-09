@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { IUser } from '../../Types/User';
 import { defaultValues } from '../../Utils/Constants';
 import { useNavigate } from 'react-router-dom';
+import '../User/StyleUser.css';
 
 function EditUser() {
 
@@ -48,13 +49,14 @@ function EditUser() {
   }
 
   return (
-   <div className="EditPage" style={{padding: '100px'}}>
-    <div className="form">
+   <div className="EditPage">
     <form className="Edit-form"
      onSubmit={handleSubmit}
      >
-      <div className="RegisterInfo">
-         <p>Register info (required):</p>
+    <div className="formEdit">
+      <div className="UserInfo">
+         <h1>Register info (required):</h1>
+         <h2>UserName</h2>
          <input
          type="text"
          placeholder="User name"
@@ -64,6 +66,7 @@ function EditUser() {
          autoComplete='off'
          required
          />
+         <h2>Password</h2>
          <input
          type="password"
          placeholder="Password"
@@ -73,6 +76,7 @@ function EditUser() {
          autoComplete='off'
          required
          />
+         <h2>Email</h2>
           <input
          type="text"
          placeholder="Email"
@@ -84,7 +88,8 @@ function EditUser() {
          />
       </div>
       <div className='name'>
-         <p>Name:</p>
+         <h1>Name:</h1>
+         <h2>First name</h2>
          <input
          type="text"
          placeholder="First name"
@@ -93,6 +98,7 @@ function EditUser() {
           onChange={handleChange}
          autoComplete='off'
          />
+         <h2>Last name</h2>
          <input
          type="text"
          placeholder="Last name"
@@ -103,7 +109,8 @@ function EditUser() {
          />
       </div>
       <div className='address'>
-         <p>Address:</p>
+         <h1>Address:</h1>
+         <h2>City</h2>
          <input
          type="text"
          placeholder="City"
@@ -112,6 +119,7 @@ function EditUser() {
            onChange={handleChange}
          autoComplete='off'
          />
+         <h2>Street</h2>
          <input
          type="text"
          placeholder="Street"
@@ -120,6 +128,7 @@ function EditUser() {
           onChange={handleChange}
          autoComplete='off'
          />
+         <h2>Home</h2>
          <input
          type="text"
          placeholder="Home"
@@ -128,6 +137,7 @@ function EditUser() {
           onChange={handleChange}
          autoComplete='off'
          />
+         <h2>ZipCode</h2>
          <input
          type="text"
          placeholder="Zipcode"
@@ -138,7 +148,8 @@ function EditUser() {
          />
       </div>
       <div className='number'>
-         <p>Number</p>
+         <h1>Number</h1>
+         <h2>Country code</h2>
          <input
          type="text"
          placeholder="Country code"
@@ -147,6 +158,7 @@ function EditUser() {
           onChange={handleChange}
          autoComplete='off'
          />
+         <h2>Number</h2>
          <input
          type="number"
          placeholder="Number"
@@ -156,9 +168,11 @@ function EditUser() {
          autoComplete='off'
          />
       </div>
-      <button  type='submit'>Edit</button>
-      </form>
       </div>
+      <div className='FormButton'>
+      <button  type='submit'>Edit</button>
+      </div>
+      </form>
       </div>
   )
 }
