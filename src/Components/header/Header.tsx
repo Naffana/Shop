@@ -90,7 +90,7 @@ export function Header() {
       
       <nav>
          <Link className='Cart Navigation' to="Card"> <img id='cart' src={Card} alt=""/></Link>
-         <Link className='Like Navigation' to="Like"> <img id='like' src={Like} alt="" /></Link>
+         <Link className='Like Navigation' to=""> <img id='like' src={Like} alt="" /></Link>
          <Link className='User Navigation' to="SignIn"> <img src={User} alt="" /></Link>
       </nav>
     </header>

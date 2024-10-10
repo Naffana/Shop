@@ -1,6 +1,7 @@
 import React  from 'react';
 import { Route, Routes } from 'react-router-dom';
 import {Header} from './Components/header/Header';
+import {Footer} from './Components/footer/Footer';
 import Main from './Components/Main/Main';
 import SignIn from './Components/Main/Sign In(Up)/SignIn';
 import Like from './Components/Main/Like/Like';
@@ -11,14 +12,14 @@ import SingleProduct from './Components/Product/SingleProduct';
 import ProtectedRoute from './Components/Main/Sign In(Up)/ProtectedRoute';
 import User from './Components/User/User';
 import EditUser from './Components/User/EditUser';
+import "./Components/Main/Main.css"
 
 
 
 
 function App() {
   return(
-    
-<>
+<div className='body'>
     <Header/>
     <Routes>
       <Route path='/' element={<Main/>}/>
@@ -35,8 +36,8 @@ function App() {
       <Route path='/EditUser' element={<EditUser/>}/>
       <Route path='/products/:id' element={<SingleProduct/>}/>
     </Routes>
-   
-</>
+   <Footer/>
+</div>
   
   );
 }

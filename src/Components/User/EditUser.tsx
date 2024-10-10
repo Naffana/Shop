@@ -3,6 +3,7 @@ import { IUser } from '../../Types/User';
 import { defaultValues } from '../../Utils/Constants';
 import { useNavigate } from 'react-router-dom';
 import '../User/StyleUser.css';
+import del from "../../Source/delete.png";
 
 function EditUser() {
 
@@ -36,6 +37,8 @@ function EditUser() {
     }
   };
 
+  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!user) return;
@@ -48,6 +51,29 @@ function EditUser() {
     return <p>Loading user data...</p>;
   }
 
+
+
+  const deleteAccount = () => {
+    const isConfirmed = window.confirm('Are you sure you want to delete your account?');
+  
+    if (isConfirmed) {
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      const currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
+
+      if (currentUser) {
+        const updatedUsers = users.filter(
+          (user: { login: { email: string; userName: string } }) =>
+            user.login.email !== currentUser.login.email &&
+            user.login.userName !== currentUser.login.userName
+        );
+        localStorage.setItem('users', JSON.stringify(updatedUsers));
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('isAuthenticated');
+        navigate('/')
+        window.location.reload()
+      } 
+    } 
+  };
   return (
    <div className="EditPage">
     <form className="Edit-form"
@@ -170,7 +196,8 @@ function EditUser() {
       </div>
       </div>
       <div className='FormButton'>
-      <button  type='submit'>Edit</button>
+      <button className='edit'  type='submit'>Edit</button>
+      <button type='button' className='del' onClick={deleteAccount}><img src={del} alt="" /></button>
       </div>
       </form>
       </div>

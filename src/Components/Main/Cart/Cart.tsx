@@ -18,14 +18,14 @@ function Cart() {
       setUser(currentUser);
     }
   }, []);
-
-  if (!user || !user.cart || user.cart === null) {
+  const cartItems = Array.isArray(user.cart) ? user.cart : [];
+  if (!user || !user.cart || cartItems === null) {
     return <div>Your cart is empty.</div>;
   }
 
  const totalSum = ()=>{
   let total = 0;
-   user.cart.map((item)=>{
+  cartItems.map((item)=>{
    total = total+item.summa
    return total;
   })
@@ -35,7 +35,7 @@ function Cart() {
 
  const clearCart = (id:number) => {
   if (user) {
-    const updatedCart = user.cart?.filter((item) => item.id !== id) || [];
+    const updatedCart = cartItems?.filter((item) => item.id !== id) || [];
     const updatedUser = { ...user, cart: updatedCart };  
     setUser(updatedUser);
     localStorage.setItem('currentUser', JSON.stringify(updatedUser)); 
@@ -43,7 +43,7 @@ function Cart() {
 };
 const quantity = (id: number, newQuantity: number) => {
 
-  const updatedCart = user?.cart?.map((item) =>{
+  const updatedCart = cartItems.map((item) =>{
     if(item.id === id){
         return{...item,quantity: newQuantity, summa: newQuantity*item.price}}
       else return item;
@@ -60,17 +60,16 @@ const quantity = (id: number, newQuantity: number) => {
     <div className='cartPage'>
       <h1>Your Cart</h1>
       <div className='cartForm'>
-        {user.cart.map((item) => (
+        {
+        cartItems.map((item) => (
           <div className='item' key={item.id}>
             <Link className='infoProd' to={`/products/${item.id}`}>
-            {/* <div className='infoProd'> */}
              <img className='infoImg' src={item.image} alt="" />
               <h1> {item.title.slice(0,36)}...</h1>
-            {/* </div> */}
                 </Link>
             <div className='infoPrice'>
               <h2>Price: {item.price}$</h2>
-              <p>Summa: {item.summa}$</p>
+              <p>Summa: {item.summa.toFixed(2)}$</p>
             </div>
             <div className='input'>
               <div className="input-number">
