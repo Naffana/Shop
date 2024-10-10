@@ -6,7 +6,6 @@ import { addItemToCart } from '../Store/Reducer/Reducers';
 import { AppDispatch, RootState } from '../Store/Store';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import like from "../../Source/like.png"
 
 function ProductCart({id, image, title, price, rating, description, category}:IProd) {
   const useAppDispatch = useDispatch.withTypes<AppDispatch>()
