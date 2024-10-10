@@ -80,9 +80,8 @@ const userSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder
     //@ts-ignore
-      .addCase(
+    builder.addCase(
         createUser.fulfilled,
         (state, { payload }: { payload: IUser }) => {
           if (state.User) {
