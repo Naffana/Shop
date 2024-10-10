@@ -10,7 +10,7 @@ import "./Product.css";
 
 import rate from "../../Source/rate.png";
 import { addItemToCart } from "../Store/Reducer/Reducers";
-import { log } from "console";
+
 
 export const Products = () => {
   const useAppDispatch = useDispatch.withTypes<AppDispatch>();
