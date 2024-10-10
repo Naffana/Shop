@@ -356,7 +356,7 @@
     width: 250px;
     height: 350px;
   }
-  
+
   .Prod_img>img {
     width: 70dvw;
   }
@@ -398,9 +398,11 @@
     height: 200px;
 
   }
-  .site{
+
+  .site {
     padding-top: 180px;
   }
+
   .Prod_img>img {
     height: 25dvh;
   }

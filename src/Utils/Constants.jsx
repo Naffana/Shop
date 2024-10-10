@@ -2,31 +2,31 @@
 export const API_URL = 'https://fakestoreapi.com';
 
 export const defaultValues = {
-   name:{
+  name: {
     firstName: "",
     lastName: "",
-   },
-   address: {
+  },
+  address: {
     city: "",
-   street: "",
-   home: "",
-   zipcode: "",
-   },
-   number:{
+    street: "",
+    home: "",
+    zipcode: "",
+  },
+  number: {
     countryСode: "",
-    number:0,
-   },
-   cart:{
-    id:0,
-   summa:0,
-   quantity:0,
-   title:'',
-   image:'',
-   price:0,
-   },
-   login: {
+    number: 0,
+  },
+  cart: {
+    id: 0,
+    summa: 0,
+    quantity: 0,
+    title: '',
+    image: '',
+    price: 0,
+  },
+  login: {
     email: '',
     userName: '',
     password: '',
   },
- }
+}

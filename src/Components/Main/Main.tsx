@@ -9,9 +9,7 @@ function Main() {
   return (
    <>
       <FormCategories/>
-      {/* <div className='BodyProd'> */}
       <Products/> 
-      {/* </div> */}
    </>
 
    

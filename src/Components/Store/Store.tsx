@@ -1,9 +1,8 @@
-import {combineReducers } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 
-import {ReducerAuth, ReducerProduct, ReducerUsers} from './Reducer/Reducers'
-import { apiSlice } from '../api/apiSlice';
-
+import { ReducerAuth, ReducerProduct, ReducerUsers } from "./Reducer/Reducers";
+import { apiSlice } from "../api/apiSlice";
 
 export const rootReducer = combineReducers({
   products: ReducerProduct,
@@ -13,16 +12,16 @@ export const rootReducer = combineReducers({
 });
 
 const store = configureStore({
-  reducer: rootReducer, 
+  reducer: rootReducer,
   devTools: true,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
-},
-);
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
+});
 
-export type AppStore = typeof store
+export type AppStore = typeof store;
 
-export type RootState = ReturnType<AppStore['getState']>
+export type RootState = ReturnType<AppStore["getState"]>;
 
-export type AppDispatch = AppStore['dispatch']
+export type AppDispatch = AppStore["dispatch"];
 
 export default store;

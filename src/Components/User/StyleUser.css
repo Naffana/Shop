@@ -1,45 +1,49 @@
-
-.InfoPage{
+.InfoPage {
    width: 500px;
    padding: 10% 0 0;
    margin: auto;
- 
-}
-.EditPage{
-width: 50%;
-padding: 10% 0 0;
-margin: auto;
+
 }
 
-.Info{
-position: relative;
- z-index: 1;
- background: var(--white);
- max-width: 500px;
- padding: 50px;
- text-align: center;
- border-radius: 10px;
- box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
- vertical-align: middle;
+.EditPage {
+   width: 50%;
+   padding: 10% 0 0;
+   margin: auto;
 }
-.imgEdit{
+
+.Info {
+   position: relative;
+   z-index: 1;
+   background: var(--white);
+   max-width: 500px;
+   padding: 50px;
+   text-align: center;
+   border-radius: 10px;
+   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   vertical-align: middle;
+}
+
+.imgEdit {
    width: 50px;
    height: 50px;
    cursor: pointer;
 }
-.exit{
-   background:url('../../Source/exit.png') no-repeat;
+
+.exit {
+   background: url('../../Source/exit.png') no-repeat;
    width: 50px;
    height: 50px;
    background-size: cover;
    cursor: pointer;
 }
-.btns{
+
+.btns {
    display: flex;
    justify-content: space-between;
    flex-direction: row;
 }
-.exit{
+
+.exit {
    margin-top: 5px;
 }
 
@@ -57,16 +61,16 @@ position: relative;
    border-radius: 10px;
    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
    vertical-align: middle;
- }
- 
- .Edit-form{
+}
+
+.Edit-form {
    display: flex;
    flex-direction: column;
    margin-bottom: 200px;
    min-width: 404px;
- }
- 
- .formEdit input {
+}
+
+.formEdit input {
    background: var(--black);
    width: 100%;
    border: 0;
@@ -76,9 +80,9 @@ position: relative;
    font-size: 23px;
    border-radius: 10px;
    color: var(--white);
- }
- 
- .FormButton button {
+}
+
+.FormButton button {
    text-transform: uppercase;
    outline: 0;
    background: var(--red);
@@ -91,55 +95,68 @@ position: relative;
    transition: all 0.3 ease;
    cursor: pointer;
    border-radius: 10px;
- }
- 
- .FormButton button:hover,.FormButton button:active,.FormButton button:focus {
+}
+
+.FormButton button:hover,
+.FormButton button:active,
+.FormButton button:focus {
    opacity: 80%;
- }
- .FormButton{
+}
+
+.FormButton {
    display: flex;
    flex-direction: row;
- }
- .del>img{
+}
+
+.del>img {
    width: 50px;
    height: 50px;
- }
- .del{
+}
+
+.del {
    max-width: 20%;
- }
- 
+}
+
 @media (max-width:1024px) {
-   .EditPage{
+   .EditPage {
       padding-top: 200px;
-   } 
-   .Info{
+   }
+
+   .Info {
       margin-top: 100px;
    }
 }
+
 @media (max-width:768px) {
-   .EditPage{
+   .EditPage {
       width: 100%;
    }
-   
+
 }
+
 @media (max-width:540px) {
-   .InfoPage{
-      width: 300px; 
+   .InfoPage {
+      width: 300px;
       font-size: 10px;
    }
-   .Info{
+
+   .Info {
       margin-top: 100px;
    }
-   .formEdit{
+
+   .formEdit {
       font-size: 10px;
    }
+
    .formEdit input {
       font-size: 15px;
    }
-   .Edit-form{
+
+   .Edit-form {
       min-width: 200px;
    }
-   .EditPage{
+
+   .EditPage {
       padding-top: 150px;
-   } 
+   }
 }
