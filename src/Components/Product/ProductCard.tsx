@@ -6,7 +6,7 @@ import { addItemToCart } from '../Store/Reducer/Reducers';
 import { AppDispatch, RootState } from '../Store/Store';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import like from "../../Source/like.png"
 
 function ProductCart({id, image, title, price, rating, description, category}:IProd) {
   const useAppDispatch = useDispatch.withTypes<AppDispatch>()
@@ -16,7 +16,7 @@ function ProductCart({id, image, title, price, rating, description, category}:IP
   const navigate = useNavigate();
   const addToCart = (id: number)=>{
     if (id) {
-      dispatch(addItemToCart(items[id]));
+      dispatch(addItemToCart(items[id-1]));
     }
   }
 
@@ -48,7 +48,7 @@ function ProductCart({id, image, title, price, rating, description, category}:IP
   <button className='btn sep cart' onClick={ ()=>{
         if (!isAuthenticated) {
         navigate('/SignUp');
-        }else addToCart(id-1)
+        }else addToCart(id)
         }}><h1>To cart</h1></button>
 </div>
 </div>

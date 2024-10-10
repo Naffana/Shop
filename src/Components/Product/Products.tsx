@@ -10,6 +10,7 @@ import './Product.css'
 
 import rate from '../../Source/rate.png';
 import { addItemToCart } from '../Store/Reducer/Reducers';
+import { log } from 'console';
 
 
 
@@ -34,7 +35,7 @@ export const  Products = () => {
 
   const addToCart = (id: number)=>{
     if (id) {
-      dispatch(addItemToCart(items[id]));
+      dispatch(addItemToCart(items[id-1]));
     }
   }
 
@@ -74,7 +75,9 @@ export const  Products = () => {
       ()=>{
         if (!isAuthenticated) {
         navigate('/SignUp');
-        }else addToCart(items.id-1)
+        }else {
+          addToCart(items.id)
+        }
         }}
      
      ><h1>To cart</h1></button>

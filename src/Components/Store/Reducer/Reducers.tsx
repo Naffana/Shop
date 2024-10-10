@@ -50,11 +50,8 @@ const initialStateAuth: IAuthState= {
   initialState: initialStateUsers,
   reducers:{
     addItemToCart:(_, { payload }) => {
-  
       const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
       let newCart = Array.isArray(currentUser.cart) ? [...currentUser.cart] : [];
-      console.log('currentUsers',currentUser);
-      
       const found = newCart.find(({ id }) => id === payload.id);
       if (found) {
         newCart = newCart.map((item) => {
@@ -107,8 +104,6 @@ const users = JSON.parse(localStorage.getItem('users') || '[]');
     }
     return user; 
   });
-
-
   localStorage.setItem('users', JSON.stringify(updatedUsers));
 }
 
